@@ -47,8 +47,6 @@ out = cur.execute(sql).fetchone()
 print(out[0])
 if out[0]=='T':
     backup(prod_dst,prod_src)
-    #send an email to myself as a confirmation that backup has been completed - uploaded in the same folder
-    make_mail_smtp()
 else:
     print('Flag is F so no backup')
 
